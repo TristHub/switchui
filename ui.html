@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: red;
+		}
+		.main{
+			margin: 150px auto;
+			width: 400px;
+			height: 430px;
+			margin-bottom: 40px;
+		}
+		.left{
+			height: 400px;
+			width: 150px;
+			border: 15px solid #FFFFFF;
+			border-radius: 70px 0px 0px 70px; /*应该是让四个角变圆，70代表左上 左下*/
+			float: left;
+		}
+		.right{
+			height: 400px;
+			width: 150px;
+			background: #FFFFFF;
+			border: 15px solid #FFFFFF;
+			border-radius: 0px 70px 70px 0px;
+			float: left;
+			margin-left: 40px;
+			/*transform: translate(0px,-50px);*/
+			animation: moves 0.8s ease;
+		}
+		.leftArc{
+			width: 90px;
+			height: 90px;
+			background: #FFFFFF;
+			border-radius: 50%;
+			margin: 30px auto;
+		}
+		.rightArc{
+			width: 90px;
+			height: 90px;
+			background: red;
+			border-radius: 50%;
+			margin: 180px auto;
+		}
+		@keyframes moves{
+			0%{transform: translate(0px,-60px);}
+			80%{transform: translate(0px,-30px);}
+			100%{transform: translate(0px,0px);}
+		}
+		.text{
+			width: 100%;
+		}
+		.text p{
+			text-align: center;
+			color: #FFFFFF;
+			font-size: 40px;
+			font-weight: bold;
+			letter-spacing: 10px;
+		}
+		.text p:last-chlid{
+			/*first-chlid/last-chlid选择父级下第一个元素和最后一个元素*/
+			font-size: 60px;
+		}
+	</style>
+<body>
+	<div class="main">
+		<div class="left"><div class="leftArc"></div></div>
+		<div class="right"><div class="rightArc"></div></div>
+	</div>
+	<div class="text">
+		<p>N I N T E N D O</p>
+		<p>S W I T C H</p>
+	</div>
+	<audio></audio>
+</body>
+</html>
